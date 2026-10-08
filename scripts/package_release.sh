@@ -46,7 +46,7 @@ for _asset in launcher_assets/img/boxart.tga launcher_assets/img/BOXART_SOURCE.t
   fi
 done
 # Extra docs shipped at the zip root (DISC.md tells players which dump works).
-for _doc in README.md DISC.md LICENSE launcher_assets/img/BOXART_SOURCE.txt; do
+for _doc in README.md DISC.md LICENSE launcher_assets/img/BOXART_SOURCE.txt third_party/SDL3-LICENSE.txt; do
   if [[ -f "${ROOT}/${_doc}" ]]; then
     EXTRA+=(--doc "${_doc}")
   fi
@@ -54,7 +54,7 @@ done
 EXTRA+=(--runtime-dir .github/screenshots --runtime-dir launcher_assets/img)
 
 cd "${ROOT}"
-exec bash "${PACKAGER}" \
+bash "${PACKAGER}" \
   --root "${ROOT}" \
   --build-dir "${BUILD_DIR}" \
   --artifact "${ARTIFACT_TAG}" \
@@ -65,3 +65,23 @@ exec bash "${PACKAGER}" \
   --version-env RELEASE_VERSION \
   --disc-hint "your legally owned Um Jammer Lammy disc" \
   "${EXTRA[@]}"
+
+# Ubuntu 24.04 does not provide SDL3. Bundle the exact shared library used
+# by this build and let the extracted executable find it beside itself.
+if [[ "${ARTIFACT_TAG}" == linux-* ]]; then
+  command -v patchelf >/dev/null
+  STAGE="${ROOT}/dist/stage-game-${ARTIFACT_TAG}"
+  EXE="${STAGE}/Um_Jammer_Lammy_Recompiled"
+  SDL_LIBRARY="$(ldd "${EXE}" | awk '$1 == "libSDL3.so.0" && $2 == "=>" {print $3}')"
+  [[ -f "${SDL_LIBRARY}" ]] || { echo "error: cannot resolve this build's SDL3 library" >&2; exit 1; }
+  mkdir -p "${STAGE}/lib"
+  cp -L "${SDL_LIBRARY}" "${STAGE}/lib/libSDL3.so.0"
+  patchelf --set-rpath '$ORIGIN/lib' "${EXE}"
+  if ldd "${EXE}" | grep -q 'not found'; then
+    echo "error: unresolved Linux release dependencies" >&2
+    exit 1
+  fi
+  VERSION="$(tr -d '[:space:]' < "${ROOT}/VERSION")"
+  "${PSX_RELEASE_STAGE_PYTHON:-python3}" "${ROOT}/psxrecomp/tools/create_release_zip.py" \
+    --source "${STAGE}" --output "${ROOT}/dist/ujl-${VERSION}-${ARTIFACT_TAG}.zip"
+fi

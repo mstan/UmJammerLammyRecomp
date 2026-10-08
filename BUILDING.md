@@ -27,4 +27,4 @@ cc -std=c99 -Wall -Wextra -Werror -Ipsxrecomp/runtime/include tools/test_timing.
 build-release/test-timing
 ```
 
-The release wrapper requires both the cover and its source credit. It includes the staged launcher assets and ships `BOXART_SOURCE.txt` alongside the player README. Build each platform from your own local disc, then run `scripts/package_release.sh build-release windows-x64 <recompiler-build>` or the corresponding `build-linux linux-x64` command. No generated game C or private disc input is uploaded to the source repository.
+The release wrapper requires both the cover and its source credit. It includes the staged launcher assets and ships `BOXART_SOURCE.txt` alongside the player README. Build each platform from your own local disc, then run `scripts/package_release.sh build-release windows-x64 <recompiler-build>` or the corresponding `build-linux linux-x64` command. Linux packaging requires `patchelf` and bundles the SDL3 shared library linked by that build; other desktop runtime libraries come from the host. No generated game C or private disc input is uploaded to the source repository.
