@@ -1,0 +1,63 @@
+# Autofilled by tools/new_project_layout/probe_disc.py from your legal dump.
+# Review before shipping. Runtime quirks / overlay seeds still need hand work.
+
+[game]
+name = "Um Jammer Lammy"
+id = "SCUS-94448"
+players = 2
+exe = "disc/SCUS_944.48"
+disc = "disc/Um Jammer Lammy [U] [SCUS-94448].cue"
+load_address = "0x80010000"
+entry_pc = "0x8002E120"
+text_size = "0x00062800"
+stack_base = "0x801FFFF0"
+
+# Digests are for data Track 01 (first BINARY FILE / TRACK 01).
+[prepare_disc]
+out_dir = "disc"
+bin_name = "Um Jammer Lammy [U] [SCUS-94448].bin"
+cue_name = "Um Jammer Lammy [U] [SCUS-94448].cue"
+boot_exe = "SCUS_944.48"
+known_sizes = [740416656]
+known_md5 = [
+  "c5b047642aac6bd414dffce52909a940",
+]
+known_sha1 = [
+  "86fc942a25063c56bb21a20db14961b9f0ac0039",
+]
+known_crc32 = [
+  "4775ad17",
+]
+
+[recompiler]
+seeds = "seeds/ghidra_funcs.txt"
+out_dir = "generated"
+strict = true
+
+[runtime]
+window_title = "Um Jammer Lammy Recompiled"
+memcard_dir = "saves"
+overlay_cache = true
+audio_buffer_ms = 60
+
+[video]
+renderer = "opengl"
+aspect_ratio = "4:3"
+internal_resolution = "1080p"
+resolution_reference_lines = 240
+
+[widescreen]
+native_wide = true
+auto_ui_squash = true
+gte_game_mode = true
+
+[controller]
+default_mode = "digital"
+
+# Online mount gate: digests + track count + optional TOC fingerprint
+# (see docs/NETPLAY.md).
+multitap_analog = true
+[netplay]
+require_cue = true
+required_tracks = 1
+required_disc_fp = "e8117108e1a142a691628b01c17624c30a284062c1a97bb19d8fda0df9ab10c4"

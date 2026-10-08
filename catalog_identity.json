@@ -1,0 +1,46 @@
+{
+  "format_version": 1,
+  "game": {
+    "name": "Um Jammer Lammy",
+    "id": "SCUS-94448",
+    "boot_exe": "SCUS_944.48"
+  },
+  "marketing": {
+    "description": "Um Jammer Lammy on PC with rhythm timing assistance, adaptive widescreen, 1080p rendering and fast resource loading.",
+    "publisher": "Sony",
+    "year": "1999",
+    "region": "North America",
+    "players": 2
+  },
+  "rom_identity": {
+    "cue_name": "Um Jammer Lammy [U] [SCUS-94448].cue",
+    "bin_name": "Um Jammer Lammy [U] [SCUS-94448].bin",
+    "track_counts": [
+      1
+    ],
+    "require_cue": true,
+    "data_track": {
+      "size": 740416656,
+      "md5": "c5b047642aac6bd414dffce52909a940",
+      "sha1": "86fc942a25063c56bb21a20db14961b9f0ac0039",
+      "crc32": "4775ad17"
+    },
+    "disc_fp": "e8117108e1a142a691628b01c17624c30a284062c1a97bb19d8fda0df9ab10c4"
+  },
+  "exe": {
+    "load_address": "0x80010000",
+    "entry_pc": "0x8002E120",
+    "text_size": "0x00062800",
+    "stack_base": "0x801FFFF0"
+  },
+  "seeds": {
+    "count": 949,
+    "source": "boot_exe_jal"
+  },
+  "warnings": [],
+  "notes": [
+    "entry_pc/load_address/text_size/stack_base taken from PS-X EXE header.",
+    "seeds are first-pass boot-EXE JAL targets (+ entry); expect to grow as overlays / runtime paths are discovered.",
+    "required_disc_fp is psxrecomp-toc-v1 (matches runtime DiscIdentity)."
+  ]
+}

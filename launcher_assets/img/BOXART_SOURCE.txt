@@ -1,0 +1,8 @@
+Box art sourced from libretro-thumbnails (Named_Boxarts).
+Matched name: Um Jammer Lammy (USA)
+URL: https://thumbnails.libretro.com/Sony%20-%20PlayStation/Named_Boxarts/Um%20Jammer%20Lammy%20(USA).png
+https://github.com/libretro-thumbnails/libretro-thumbnails
+PNG is for README; TGA is for recomp-ui LAUNCHER_BOXART.
+
+Original cover artwork belongs to its respective rights holders, including Sony Computer Entertainment and NanaOn-Sha. It is not covered by this project's source-code license.
+The PNG is preserved as downloaded; the TGA changes only the image format.

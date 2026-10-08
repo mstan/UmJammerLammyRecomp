@@ -1,0 +1,33 @@
+name: Source checks
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  callbacks:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+      - name: Check authored callback contracts (no game assets)
+        run: |
+          mkdir -p build-checks
+          for test in timing loading; do
+            cc -std=c99 -Wall -Wextra -Werror -Ipsxrecomp/runtime/include \
+              tools/test_${test}.c -o build-checks/test-${test}
+            build-checks/test-${test}
+          done
+      - name: Check release wrapper
+        run: bash -n scripts/package_release.sh
+      - name: Keep private game data out of public source
+        run: |
+          python3 - <<'PY'
+          import subprocess
+          from pathlib import PurePosixPath
+          files = subprocess.check_output(['git', 'ls-files'], text=True).splitlines()
+          forbidden = {'disc', 'generated', 'analysis', 'saves', 'bios', 'build', 'dist'}
+          for name in files:
+              p = PurePosixPath(name)
+              assert p.parts[0] not in forbidden, name
+              assert p.suffix.lower() not in {'.bin', '.cue', '.iso', '.chd', '.gpr', '.mcd'}, name
+          PY

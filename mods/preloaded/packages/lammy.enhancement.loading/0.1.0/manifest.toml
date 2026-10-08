@@ -1,0 +1,23 @@
+format_version = 7
+id = "lammy.enhancement.loading"
+version = "0.1.0"
+name = "Fast Resource Loading"
+author = "mstan"
+description = "Prepare a private cache from your disc and load stage resources from memory."
+resolver = "declarative"
+save_compatibility = "shared"
+
+[[target]]
+game_id = "SCUS-94448"
+
+[[feature]]
+id = "loading"
+name = "Fast Resource Loading"
+description = "HLE for the verified US resource archive loader. The first launch prepares a private cache from your disc; later launches reuse it. Music and movies retain their original streaming."
+group = "Enhancements"
+channel = "experimental"
+default_enabled = true
+
+[[plugin]]
+feature = "loading"
+id = "lammy.loading"

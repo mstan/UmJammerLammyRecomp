@@ -1,0 +1,8 @@
+[submodule "psxrecomp"]
+	path = psxrecomp
+	url = https://github.com/RetroPortingToolKit/psxrecomp.git
+	branch = fix/parappa-audio-buffer-target
+[submodule "recomp-ui"]
+	path = recomp-ui
+	url = https://github.com/RetroPortingToolKit/recomp-ui.git
+	branch = master

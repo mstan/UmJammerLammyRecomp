@@ -1,0 +1,43 @@
+format_version = 7
+id = "lammy.enhancement.widescreen"
+version = "0.1.0"
+name = "Adaptive Widescreen"
+author = "mstan"
+description = "A wider view that follows your window, with fixed aspect choices."
+resolver = "declarative"
+save_compatibility = "shared"
+
+[[target]]
+game_id = "SCUS-94448"
+
+[[feature]]
+id = "widescreen"
+name = "Adaptive Widescreen"
+description = "Fit gameplay to your window using the native wide renderer. Menus and movies preserve their original proportions. Experimental: scene coverage needs player validation."
+group = "Display"
+channel = "experimental"
+default_enabled = true
+
+[[option]]
+feature = "widescreen"
+id = "aspect"
+label = "Screen fit"
+type = "choice"
+default = "adaptive"
+
+[[option.choice]]
+value = "adaptive"
+label = "Fit to window"
+[[option.choice]]
+value = "16:9"
+label = "16:9"
+[[option.choice]]
+value = "21:9"
+label = "21:9"
+[[option.choice]]
+value = "4:3"
+label = "Original 4:3"
+
+[[plugin]]
+feature = "widescreen"
+id = "lammy.widescreen"

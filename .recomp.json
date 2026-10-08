@@ -1,0 +1,13 @@
+{
+  "$schema": "https://recomp.fyi/schema/v1.json",
+  "game": "Um Jammer Lammy",
+  "system": "PS1",
+  "type": "recomp",
+  "toolchain": "psxrecomp",
+  "status": "playable",
+  "project": "UmJammerLammyRecomp",
+  "original": {
+    "region": "USA",
+    "serial": "SCUS-94448"
+  }
+}
