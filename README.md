@@ -8,7 +8,7 @@ Play **Um Jammer Lammy** on PC, with a controller or keyboard and adjustable rhy
 
 An initial preview for the **US PlayStation version, SCUS-94448**, with Windows and Linux builds.
 
-**[Download the initial release](https://github.com/mstan/UmJammerLammyRecomp/releases/tag/v0.1.0)** | [Supported disc](DISC.md)
+**[Download the latest release](https://github.com/mstan/UmJammerLammyRecomp/releases/latest)** | [Supported disc](DISC.md)
 
 ## Rhythm Timing Assist
 
@@ -22,7 +22,7 @@ You still need the right buttons and the right musical pattern. The mod changes 
 
 ## Display and loading
 
-The default internal resolution is **1080p**. **Adaptive Widescreen** fits the gameplay view to your window; Mods also offers fixed **16:9**, **21:9**, and original **4:3**. Movies and 2D menus retain their original proportions. Change internal resolution in the launcher's graphics settings.
+The shared Internal Resolution mod defaults **ON at 4x**, with saved **Native (1x) through 32x** choices in Mods. Disabling it uses native resolution. **Adaptive Widescreen** fits the gameplay view to your window; Mods also offers fixed **16:9**, **21:9**, and original **4:3**. Movies and 2D menus retain their original proportions. Use the Internal Resolution mod to keep the same saved choice across launches.
 
 **Fast Resource Loading** is enabled by default. On the first launch it prepares a private cache from your own disc; later launches verify and reuse it. Stage textures, models and sound banks load from memory through a game-specific HLE adapter. Music and movie streams keep their original timing. Disable this mod for original loading.
 
@@ -38,7 +38,15 @@ The runtime audio buffer starts at **60 ms**. Timing compensation does not measu
 
 The game disc and a retail PlayStation BIOS are not included. The project uses [psxrecomp](https://github.com/RetroPortingToolKit/psxrecomp) and [recomp-ui](https://github.com/RetroPortingToolKit/recomp-ui), with OpenBIOS available from the framework.
 
-## Preview status
+## Current release preparation
+
+Version 0.1.1 uses the merged shared engine and maintained release builder with
+fresh title-specific selective PGO. The parsed audio buffer target is now 60 ms;
+the previous runtime-table spelling was ignored. Package review and the owner
+quick look are recorded separately; no additional gameplay/audio coverage or
+per-title speedup is inferred from boot profiling.
+
+## Historical v0.1.0 preview status (2026-10-08)
 
 Controller gameplay and the new display/loading features have received an initial Windows playtest. Focused tests cover stock timing, wider windows, signed compensation and replay guards. A measured menu resource load fell from about **4.2 seconds to 0.2 seconds**, excluding first-launch cache preparation.
 

@@ -1,0 +1,47 @@
+schema = 1
+
+[product]
+name = "ujl"
+display_name = "Um Jammer Lammy Recompiled"
+exe_name = "Um_Jammer_Lammy_Recompiled"
+version_file = "VERSION"
+player_game_toml = "packaging/release/game.toml"
+zip_folder = "UmJammerLammyRecomp"
+launcher_boxart = "launcher_assets/img/boxart.tga"
+
+[build]
+cmake_args = [
+    "-DPSX_SETUP_WIZARD=OFF",
+    "-DPSXRECOMP_FORCE_SETUP_HOST=OFF",
+    "-DPSXRECOMP_REQUIRE_GAME_C=ON",
+    "-DPSX_SDL_BACKEND=SDL3",
+    "-DPSX_ENABLE_VULKAN=OFF",
+    "-DPSX_NETPLAY=OFF",
+]
+regenerate = true
+
+[aot]
+mode = "none"
+
+[overlay_toolchain]
+# Preserve the original release fallback for uncached executable ranges.
+ship = true
+
+[payload]
+start_here = "packaging/release/START_HERE.txt"
+files = [
+    "VERSION", "README.md", "RELEASE_NOTES.md", "BUILDING.md", "DISC.md", "LICENSE",
+    ".github/screenshots/gameplay-widescreen.jpg",
+    ".github/screenshots/title-menu.png",
+    "launcher_assets/img/boxart.png",
+    "launcher_assets/img/boxart.tga",
+    "launcher_assets/img/BOXART_SOURCE.txt",
+    "third_party/SDL3-LICENSE.txt",
+]
+
+[linux]
+app_run = "packaging/linux/AppRun"
+desktop_file = "packaging/linux/io.github.mstan.UmJammerLammyRecomp.desktop"
+icon = "launcher_assets/img/boxart.tga"
+payload_dir = "ujl"
+env_prefix = "LAMMY_RECOMP"
