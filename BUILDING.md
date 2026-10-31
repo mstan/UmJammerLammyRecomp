@@ -27,4 +27,20 @@ cc -std=c99 -Wall -Wextra -Werror -Ipsxrecomp/runtime/include tools/test_timing.
 build-release/test-timing
 ```
 
-The release wrapper requires both the cover and its source credit. It includes the staged launcher assets and ships `BOXART_SOURCE.txt` alongside the player README. Build each platform from your own local disc, then run `scripts/package_release.sh build-release windows-x64 <recompiler-build>` or the corresponding `build-linux linux-x64` command. Linux packaging requires `patchelf` and bundles the SDL3 shared library linked by that build; other desktop runtime libraries come from the host. No generated game C or private disc input is uploaded to the source repository.
+The maintained release workflow requires both the cover and its source credit,
+retains README screenshot assets, and packages OpenBIOS, the title mod catalog,
+overlay compiler fallback and notices. It freshly regenerates the game from your
+original boot EXE and runs the selective PGO build phases with a private muted
+boot and normal shutdown. Profiles are build inputs, not gameplay qualification.
+
+```powershell
+scripts/package_release.ps1 --channel public --platform windows --jobs 2
+```
+
+```sh
+scripts/package_release.sh --channel public --platform linux --jobs 2
+```
+
+The channel is required. Each invocation uses its own short build/profile
+workspace. No disc, private settings, cards, snapshots, generated game C or
+compiler profiles are shipped. Linux uses the shared AppImage dependency gates.

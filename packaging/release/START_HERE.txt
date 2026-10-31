@@ -1,0 +1,19 @@
+Um Jammer Lammy Recompiled @VERSION@
+
+Run Um_Jammer_Lammy_Recompiled.exe on Windows, or the AppImage on Linux.
+Choose your own US SCUS-94448 disc CUE, keeping its original BIN beside it.
+Bundled OpenBIOS is available automatically. No retail BIOS or disc is included.
+
+Internal Resolution defaults ON at 4x. Mods offers saved Native (1x) through
+32x choices; disabling this mod uses native resolution. Adaptive Widescreen
+and title-owned Fast Resource Loading retain their existing defaults.
+Generic CD Speed and Fast Loading packages are not shipped.
+
+Rhythm Timing Assist remains optional and OFF by default. Enable it in Mods
+only if wanted; the original timing and scoring remain available. The audio
+buffer target is 60 ms. Adjust timing compensation to your own display/audio.
+Preserve your native memory cards in saves and your existing personal settings.
+
+The fresh profile-training boot is a build step, not new gameplay/audio or
+per-title performance qualification. Complete stage/duet/PaRappa-mode coverage
+is not claimed. See README and release notes for the retained preview scope.
