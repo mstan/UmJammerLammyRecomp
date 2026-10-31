@@ -36,7 +36,7 @@ The shared Internal Resolution mod defaults **ON at 4x**, with saved **Native (1
 
 The runtime audio buffer starts at **60 ms**. Timing compensation does not measure your physical display or speaker delay automatically; adjust it to your setup by playing.
 
-The game disc and a retail PlayStation BIOS are not included. The project uses [psxrecomp](https://github.com/RetroPortingToolKit/psxrecomp) and [recomp-ui](https://github.com/RetroPortingToolKit/recomp-ui), with OpenBIOS available from the framework.
+The game disc and a retail PlayStation BIOS are not included. The project uses [psxrecomp](https://github.com/mstan/psxrecomp) and [recomp-ui](https://github.com/mstan/recomp-ui), with OpenBIOS available from the framework.
 
 ## Current release preparation
 
