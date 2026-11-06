@@ -65,3 +65,15 @@ If something feels wrong, report the stage, controller, audio output and your th
 Developers can follow [BUILDING.md](BUILDING.md). Disc files, generated game code, saves and analysis dumps stay local and are excluded from the public source repository.
 
 Um Jammer Lammy is a game by NanaOn-Sha and Sony Computer Entertainment. This is an independent fan project. The US cover above comes from [libretro-thumbnails](https://thumbnails.libretro.com/Sony%20-%20PlayStation/Named_Boxarts/Um%20Jammer%20Lammy%20(USA).png); its provenance is recorded in [BOXART_SOURCE.txt](launcher_assets/img/BOXART_SOURCE.txt). Original artwork retains its owners' rights. Project code is licensed under [PolyForm Noncommercial 1.0.0](LICENSE); framework, UI and bundled assets retain their own licenses.
+
+## License
+
+For this project's code covered by the [PolyForm Noncommercial License](LICENSE),
+[PERMISSIONS.md](PERMISSIONS.md) grants standing permission for voluntary
+donations, sponsorships, and advertising revenue, including support for broader
+development initiatives. Payment must not buy access to the software, games
+built with it, or their updates, features, or game content, including early access.
+
+Matthew Stanley has authority from the relevant copyright holders to grant
+these permissions for the project's PolyForm-covered code. Third-party
+components and code explicitly licensed under other terms retain those terms.
