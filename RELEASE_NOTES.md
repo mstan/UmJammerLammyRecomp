@@ -1,4 +1,14 @@
-# Um Jammer Lammy v0.1.1 - 2026-10-30
+# Um Jammer Lammy v0.1.2 - 2026-11-25
+
+- Use the shared native BIOS executive for SDK startup, interrupt callbacks,
+  controller packets, and memory-card file completion.
+- Give native-provider overlay modules their own cache identity, preserving
+  live-code validation before cached code is used.
+- Provide Windows and Linux packages through the shared release builder.
+  Original disc selection, native memory cards, adaptive widescreen and the
+  optional Rhythm Timing Assist retain their existing behavior and defaults.
+
+## Previous release 0.1.1 - 2026-10-30
 
 - Pin the merged shared engine and current launcher UI while preserving the
   original rhythm assistance, adaptive widescreen, title resident resource loader,

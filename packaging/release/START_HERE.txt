@@ -2,7 +2,7 @@ Um Jammer Lammy Recompiled @VERSION@
 
 Run Um_Jammer_Lammy_Recompiled.exe on Windows, or the AppImage on Linux.
 Choose your own US SCUS-94448 disc CUE, keeping its original BIN beside it.
-Bundled OpenBIOS is available automatically. No retail BIOS or disc is included.
+The native runtime starts from your disc without requiring a retail BIOS.
 
 Internal Resolution defaults ON at 4x. Mods offers saved Native (1x) through
 32x choices; disabling this mod uses native resolution. Adaptive Widescreen

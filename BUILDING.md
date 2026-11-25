@@ -12,7 +12,7 @@ Use Python 3 and a native C/C++ toolchain with CMake and Ninja. Generate the gam
 
 ```sh
 python psxrecomp/psxrecomp_cli.py generate --config game.toml --project-root . --disc "path/to/your.cue"
-cmake -S . -B build-release -G Ninja -DCMAKE_BUILD_TYPE=Release -DPSXRECOMP_REQUIRE_GAME_C=ON
+cmake -S . -B build-release -G Ninja -DCMAKE_BUILD_TYPE=Release -DPSXRECOMP_REQUIRE_GAME_C=ON -DPSX_EXECUTION_PROFILE=ENHANCED -DPSX_NATIVE_KERNEL=ON
 cmake --build build-release --target psx-runtime
 ```
 

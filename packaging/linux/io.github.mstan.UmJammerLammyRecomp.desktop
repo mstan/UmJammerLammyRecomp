@@ -2,6 +2,6 @@
 Type=Application
 Name=Um Jammer Lammy Recompiled
 Exec=Um_Jammer_Lammy_Recompiled
-Icon=ujl
+Icon=io.github.mstan.UmJammerLammyRecomp
 Categories=Game;
 Terminal=false
