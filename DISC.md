@@ -16,6 +16,6 @@ These identifiers were computed from the local supported dump. Other regions
 and revisions have not been validated. A cooked 2048-byte ISO loses the XA
 streaming sectors the game needs.
 
-The launcher can use bundled OpenBIOS or your own supported retail BIOS. The
-initial controller playtest used SCPH-1001. Personal settings, controller
-bindings, saves, extracted resources and the resident cache stay on your PC.
+The native runtime starts from the selected original disc without a retail
+BIOS. Personal settings, controller bindings, saves, extracted resources and
+the resident cache stay on your PC.

@@ -28,23 +28,23 @@ The shared Internal Resolution mod defaults **ON at 4x**, with saved **Native (1
 
 ## Getting started
 
-1. Download the **windows-x64** or **linux-x64** ZIP from Releases and extract the whole folder. On Windows run `Um_Jammer_Lammy_Recompiled.exe`; on Linux run `./Um_Jammer_Lammy_Recompiled` (Ubuntu 24.04 or compatible).
+1. Download the Windows ZIP or Linux AppImage from Releases. Extract the complete ZIP on Windows and run `Um_Jammer_Lammy_Recompiled.exe`. On Linux, make the AppImage executable and launch it (Ubuntu 24.04 or compatible).
 2. Use your own **US SCUS-94448 disc image**, with its `.cue` and corresponding `.bin` together. Extract an archived dump before selecting it.
 3. Open **Um Jammer Lammy Recompiled** and select your cue sheet in the launcher.
 4. Configure your controller in **Controls**. A digital PlayStation pad is the initial controller mode. Keyboard controls are also available.
-5. Enable **Rhythm Timing Assist** in **Mods**, choose your tolerance, and start the game.
+5. Start the game. If wanted, enable **Rhythm Timing Assist** in **Mods** and choose your tolerance; it is off by default.
 
 The runtime audio buffer starts at **60 ms**. Timing compensation does not measure your physical display or speaker delay automatically; adjust it to your setup by playing.
 
-The game disc and a retail PlayStation BIOS are not included. The project uses [psxrecomp](https://github.com/mstan/psxrecomp) and [recomp-ui](https://github.com/mstan/recomp-ui), with OpenBIOS available from the framework.
+The game disc is not included. The native runtime starts from your selected disc without requiring a retail PlayStation BIOS. The project uses [psxrecomp](https://github.com/mstan/psxrecomp) and [recomp-ui](https://github.com/mstan/recomp-ui).
 
 ## Current release preparation
 
-Version 0.1.1 uses the merged shared engine and maintained release builder with
-fresh title-specific selective PGO. The parsed audio buffer target is now 60 ms;
-the previous runtime-table spelling was ignored. Package review and the owner
-quick look are recorded separately; no additional gameplay/audio coverage or
-per-title speedup is inferred from boot profiling.
+Version 0.1.2 uses the merged native BIOS executive and shared Windows/Linux
+release builder. Native startup includes SDK callback and memory-card file
+completion support. The original timing, 60 ms audio buffer target, title mods,
+and native memory cards are retained. Selective PGO boot training is a build
+step; it does not establish additional gameplay/audio coverage or a speedup.
 
 ## Historical v0.1.0 preview status (2026-10-08)
 

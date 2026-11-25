@@ -1,2 +1,2 @@
-psxrecomp=cd19bbcda10c5eca3a507904515869efc02bb1fa
+psxrecomp=bc49ccef61ae270ddfddf442c2197bd2434dfc1b
 recomp-ui=16e2c867e474648e523e2cd21eca813ebe58c795
