@@ -22,7 +22,7 @@ You still need the right buttons and the right musical pattern. The mod changes 
 
 ## Display and loading
 
-The shared Internal Resolution mod defaults **ON at 4x**, with saved **Native (1x) through 32x** choices in Mods. Disabling it uses native resolution. **Adaptive Widescreen** fits the gameplay view to your window; Mods also offers fixed **16:9**, **21:9**, and original **4:3**. Movies and 2D menus retain their original proportions. Use the Internal Resolution mod to keep the same saved choice across launches.
+Internal rendering resolution defaults to **4x**. Change **Settings > Graphics > Resolution scale** to choose a saved scale; **1x** uses native resolution. **Adaptive Widescreen** fits the gameplay view to your window; Mods also offers fixed **16:9**, **21:9**, and original **4:3**. Movies and 2D menus retain their original proportions.
 
 **Fast Resource Loading** is enabled by default. On the first launch it prepares a private cache from your own disc; later launches verify and reuse it. Stage textures, models and sound banks load from memory through a game-specific HLE adapter. Music and movie streams keep their original timing. Disable this mod for original loading.
 

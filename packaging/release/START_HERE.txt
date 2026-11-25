@@ -4,9 +4,9 @@ Run Um_Jammer_Lammy_Recompiled.exe on Windows, or the AppImage on Linux.
 Choose your own US SCUS-94448 disc CUE, keeping its original BIN beside it.
 The native runtime starts from your disc without requiring a retail BIOS.
 
-Internal Resolution defaults ON at 4x. Mods offers saved Native (1x) through
-32x choices; disabling this mod uses native resolution. Adaptive Widescreen
-and title-owned Fast Resource Loading retain their existing defaults.
+Internal resolution defaults to 4x. Change Settings > Graphics > Resolution
+scale to choose a saved scale; 1x uses native resolution. Adaptive Widescreen
+and title-owned Fast Resource Loading retain their existing defaults in Mods.
 Generic CD Speed and Fast Loading packages are not shipped.
 
 Rhythm Timing Assist remains optional and OFF by default. Enable it in Mods
